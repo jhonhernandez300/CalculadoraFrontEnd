@@ -4,17 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { IngresarsrevicioComponent } from './ingresarservicio/ingresarsrevicio.component';
+import { IngresarservicioComponent } from './ingresarservicio/ingresarservicio.component';
 import { VerhorasComponent } from './verhoras/verhoras.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    IngresarsrevicioComponent,
+    IngresarservicioComponent,
     VerhorasComponent
   ],
   imports: [
@@ -22,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
     HttpClientModule
   ],
   providers: [],

@@ -4,34 +4,37 @@ import { ServicioSettings } from '../data/servicio-settings';
 import { DataService } from '../data/data.service';
 
 @Component({
-  selector: 'app-ingresarsrevicio',
-  templateUrl: './ingresarsrevicio.component.html',
-  styleUrls: ['./ingresarsrevicio.component.css']
+  selector: 'app-ingresarservicio',
+  templateUrl: './ingresarservicio.component.html',
+  styleUrls: ['./ingresarservicio.component.css']
 })
-export class IngresarsrevicioComponent implements OnInit {
+export class IngresarservicioComponent implements OnInit {
+
+  hoy: Date = new Date();
 
   servicioSettings: ServicioSettings = {
     tecnico: null,
-    servicioRealizado: null,
+    servicioRealizado: null,        
     semanaDelAno: null,
-    diaDeLaSemana: null,    
-    horaInicial: null,
-    horaFinal: null,
-    horasDiurnas: null,
-    horasNocturnas: null
+    fechaDeInicio: null,
+    horaDeInicio: null,
+    fechaDeFinalizacion: null,
+    horaDeFinalizacion: null,
+    cantidadDeHoras: null,
+    tipoDeHora: null
   };
-
-  myForm: FormGroup;  
+  
+  myForm: FormGroup;    
 
    constructor(private formBuilder: FormBuilder, private dataService: DataService)  {          
 
       this.myForm = this.formBuilder.group({
         tecnico: [this.servicioSettings.tecnico, Validators.required],
         servicioRealizado: [this.servicioSettings.servicioRealizado, Validators.required],
-        semanaDelAno: [this.servicioSettings.semanaDelAno, Validators.required],
-        diaDeLaSemana: [this.servicioSettings.diaDeLaSemana, Validators.required],        
-        horaInicial: [this.servicioSettings.horaInicial, Validators.required],
-        horaFinal: [this.servicioSettings.horaFinal, Validators.required]
+        fechaDeInicio: [this.servicioSettings.fechaDeInicio, Validators.required],
+        horaDeInicio: [this.servicioSettings.horaDeInicio, Validators.required],
+        fechaDeFinalizacion: [this.servicioSettings.fechaDeFinalizacion, Validators.required],
+        horaDeFinalizacion: [this.servicioSettings.horaDeFinalizacion, Validators.required]
       });
      
    }

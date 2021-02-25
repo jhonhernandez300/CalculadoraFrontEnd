@@ -1,0 +1,47 @@
+<br>
+<h2>Ingresar Servicio</h2>
+    <br>    
+     <form (ngSubmit)="onSubmit()" [formGroup]="myForm">
+        <div class="form-group">
+            <label for="tecnico">Técnico (*)</label>
+            <input type="text" class="form-control" id="tecnico" name="tecnico" formControlName="tecnico" >
+        </div>
+        
+        <div class="form-group">
+            <label for="servicioRealizado">Servicio (*)</label>
+            <input type="text" class="form-control" id="servicioRealizado" formControlName="servicioRealizado">
+        </div>        
+
+        <div class="form-group">
+            <label >Fecha de inicio (*)</label>
+            <div class="input-group">
+                <input class="form-control"  formControlName="fechaDeInicio" type="date">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="horaDeInicio">Hora de inicio (*)</label>
+            <input type="number" class="form-control" id="horaDeInicio" formControlName="horaDeInicio">
+        </div>
+
+        <div class="form-group">
+            <label >Fecha de finalización (*)</label>
+            <div class="input-group">
+                <input class="form-control" formControlName="fechaDeFinalizacion" type="date" >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="horaDeFinalizacion">Hora de finalización (*)</label>
+            <input type="number" class="form-control" id="horaDeFinalizacion" formControlName="horaDeFinalizacion">
+        </div>
+       
+        <br>
+        <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Enviar</button>
+    </form>
+    <hr>
+    * requerido
+   <br><br>
+  
+  
+    

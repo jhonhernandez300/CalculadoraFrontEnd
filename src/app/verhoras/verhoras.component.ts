@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators, FormControl} from '@angular/forms';
 import { ServicioSettings } from '../data/servicio-settings';
 import { DataService } from '../data/data.service';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
 
 @Component({
   selector: 'app-verhoras',
@@ -13,12 +16,13 @@ export class VerhorasComponent implements OnInit {
   servicioSettings: ServicioSettings = {
     tecnico: null,
     servicioRealizado: null,
-    semanaDelAno: null,
-    diaDeLaSemana: null,    
-    horaInicial: null,
-    horaFinal: null,
-    horasDiurnas: null,
-    horasNocturnas: null
+    fechaDeInicio: null,
+    horaDeInicio: null,
+    semanaDelAno: null,    
+    fechaDeFinalizacion: null,
+    horaDeFinalizacion: null,
+    cantidadDeHoras: null,
+    tipoDeHora: null
   };
 
   myForm: FormGroup;  

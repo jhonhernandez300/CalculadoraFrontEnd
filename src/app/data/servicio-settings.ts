@@ -2,9 +2,10 @@ export interface ServicioSettings {
     tecnico: string,
     servicioRealizado: string,
     semanaDelAno: number,
-    diaDeLaSemana: string,    
-    horaInicial: number,
-    horaFinal: number,
-    horasDiurnas: number,
-    horasNocturnas: number
+    fechaDeInicio: Date,
+    horaDeInicio: number,
+    fechaDeFinalizacion: Date,
+    horaDeFinalizacion: number,
+    cantidadDeHoras: number,
+    tipoDeHora: string
 }

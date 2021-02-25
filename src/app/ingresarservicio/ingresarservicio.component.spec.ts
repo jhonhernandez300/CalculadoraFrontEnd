@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { IngresarsrevicioComponent } from './ingresarsrevicio.component';
+import { IngresarservicioComponent } from './ingresarservicio.component';
 
-describe('IngresarsrevicioComponent', () => {
-  let component: IngresarsrevicioComponent;
-  let fixture: ComponentFixture<IngresarsrevicioComponent>;
+describe('IngresarservicioComponent', () => {
+  let component: IngresarservicioComponent;
+  let fixture: ComponentFixture<IngresarservicioComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ IngresarsrevicioComponent ]
+      declarations: [ IngresarservicioComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IngresarsrevicioComponent);
+    fixture = TestBed.createComponent(IngresarservicioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
