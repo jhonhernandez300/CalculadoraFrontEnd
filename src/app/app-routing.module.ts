@@ -5,14 +5,18 @@ import { VerhorasComponent } from './verhoras/verhoras.component';
 import { SeeOrdersSalesComponent } from './see-orders-sales/see-orders-sales.component';
 import { SeePercentageComponent } from './see-percentage/see-percentage.component';
 import { SeeFrequencyComponent } from './see-frequency/see-frequency.component';
+import { RegistrarColaboradorComponent } from './registrar-colaborador/registrar-colaborador.component';
+import { PracticeComponent } from './practice/practice.component';
 
 const routes: Routes = [
+  { path: 'registrarColaborador', component: RegistrarColaboradorComponent },
   { path: 'seeSalesOrders', component: SeeOrdersSalesComponent },
   { path: 'seePercentage', component: SeePercentageComponent },
   { path: 'seeFrequency', component: SeeFrequencyComponent },
   { path: 'ingresarservicio', component: IngresarservicioComponent },
   { path: 'verhoras', component: VerhorasComponent },
-  { path: '', component: SeeOrdersSalesComponent }
+  { path: 'practice', component: PracticeComponent },
+  { path: '', component: RegistrarColaboradorComponent }
 ];
 
 @NgModule({

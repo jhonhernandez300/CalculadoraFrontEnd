@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { ServicioSettings } from '../data/servicio-settings';
+import { Colaborador } from '../data/colaborador';
 import { IFrequency } from '../data/ifrequency';
 import { environment } from 'src/environments/environment';
 
@@ -12,6 +13,23 @@ import { environment } from 'src/environments/environment';
 export class DataService {
 
   constructor(private http: HttpClient) { }
+
+  RegistrarColaborador(colaborador: Colaborador): Observable<any> {
+    return this.http.post('https://localhost:44309/api/RegistrarColaborador', colaborador);
+  }
+
+  ConsultarColaboradorPorIdentificación(colaborador: Colaborador): Observable<any> {
+    return this.http.get('https://localhost:44309/api/GetColaborador'+  "/" + colaborador.numeroDeIndentificacion);
+  }
+
+  getCodigoInterno(): Observable<any> {
+    return this.http.get('https://localhost:44309/api/getCodigoInterno');
+  }
+
+  obtenerAreas(): Observable<any> {
+    return this.http.get('https://localhost:44309/api/obtenerAreas');
+  }
+
 
   postServicioSettingsForm(servicioSettings: ServicioSettings): Observable<any> {
     return this.http.post('https://localhost:44309/api/Servicio/PostServicio', servicioSettings);

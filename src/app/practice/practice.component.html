@@ -1,0 +1,16 @@
+<h2>Rad button</h2>
+<br>
+
+<form [formGroup]="controlsFormGroup">
+    <label>
+        <input type="radio" formControlName="radioExample" value="water" />Water
+    </label>
+    <label>
+        <input type="radio" formControlName="radioExample" value="milk" />Milk
+    </label>
+    <br>
+    
+    <button (click)="save()">Save</button>
+    <div>{{radioExample.value}}</div>
+    <div>{{controlsFormGroup.value.radioExample}}</div>
+</form>

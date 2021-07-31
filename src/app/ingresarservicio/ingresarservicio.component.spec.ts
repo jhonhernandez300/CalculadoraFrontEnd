@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { IngresarservicioComponent } from './ingresarservicio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('IngresarservicioComponent', () => {
   let component: IngresarservicioComponent;

@@ -16,6 +16,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { SeeFrequencyComponent } from './see-frequency/see-frequency.component';
 import { SeePercentageComponent } from './see-percentage/see-percentage.component';
 import { SeeOrdersSalesComponent } from './see-orders-sales/see-orders-sales.component';
+import { RegistrarColaboradorComponent } from './registrar-colaborador/registrar-colaborador.component';
+import { ConsultarColaboradorComponent } from './consultar-colaborador/consultar-colaborador.component';
+import { PracticeComponent } from './practice/practice.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import { SeeOrdersSalesComponent } from './see-orders-sales/see-orders-sales.com
     VerhorasComponent,    
     SeeFrequencyComponent,
     SeePercentageComponent,
-    SeeOrdersSalesComponent
+    SeeOrdersSalesComponent,    
+    RegistrarColaboradorComponent, ConsultarColaboradorComponent, PracticeComponent
   ],
   imports: [
     BrowserModule,
