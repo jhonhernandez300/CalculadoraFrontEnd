@@ -18,8 +18,9 @@ export class DataService {
     return this.http.post('https://localhost:44309/api/RegistrarColaborador', colaborador);
   }
 
-  ConsultarColaboradorPorIdentificación(colaborador: Colaborador): Observable<any> {
-    return this.http.get('https://localhost:44309/api/GetColaborador'+  "/" + colaborador.numeroDeIndentificacion);
+  ConsultarColaboradorPorIdentificación(numeroDeIdentificacion: Number): Observable<any> {
+    //console.log(numeroDeIdentificacion);
+    return this.http.get('https://localhost:44309/api/ConsultarColaboradorPorIdentificacion'+  "/" + numeroDeIdentificacion);
   }
 
   getCodigoInterno(): Observable<any> {

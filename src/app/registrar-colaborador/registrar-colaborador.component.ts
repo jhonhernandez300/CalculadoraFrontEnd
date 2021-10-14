@@ -6,6 +6,7 @@ import { Area } from '../data/area';
 import { DataService } from '../data/data.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { AriaDescriber } from '@angular/cdk/a11y';
 
 @Component({
   selector: 'app-registrar-colaborador',
@@ -29,16 +30,25 @@ export class RegistrarColaboradorComponent implements OnInit {
     codigoInterno: null
   };
 
-  area: Area = {
-    id: null,
-    nombre: null
-  };
+  // area: Area = {
+  //   id: null,
+  //   nombre: null
+  // };
 
-  areas: Area[] = [];
+  areas: Area[] = [
+    {
+      id: 1,
+      nombre: "Contabilidad"
+    },
+    {
+      id: 2,
+      nombre: "Sistemas"
+    }
+  ];
 
   myForm: FormGroup;    
   submitted = false;    
-  elCodigoInterno: string;
+  elCodigoInterno: string;  
 
   constructor(private formBuilder: FormBuilder, private dataService: DataService) { }
     
@@ -51,14 +61,16 @@ export class RegistrarColaboradorComponent implements OnInit {
         email: new FormControl('', [Validators.minLength(4), Validators.maxLength(30)]),
         telefono: new FormControl('', [Validators.minLength(7), Validators.maxLength(15)]),        
         salario: new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(5)]),            
-        area: new FormControl(''),           
+        area: new FormControl(''),                   
         fechaDeIngreso: new FormControl('', [Validators.required]),
         sexo: new FormControl('', [Validators.required]),
         codigoInterno: new FormControl(this.colaborador.codigoInterno)
       });
   }
 
-  ngOnInit() {
+  
+
+  ngOnInit() {    
     this.dataService.getCodigoInterno().subscribe(
       //result => console.log('success ', result),
       result => this.elCodigoInterno = result,

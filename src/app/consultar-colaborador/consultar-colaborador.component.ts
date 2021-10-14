@@ -51,6 +51,7 @@ export class ConsultarColaboradorComponent implements OnInit {
       return      
     }
     
+    //console.log(this.myForm.value.numeroDeIndentificacion);
     this.dataService.ConsultarColaboradorPorIdentificación(this.myForm.value.numeroDeIndentificacion).subscribe(
       //result => console.log('success ', result),
       result =>  this.items = result,
